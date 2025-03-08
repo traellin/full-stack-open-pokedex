@@ -1,4 +1,5 @@
-import express from 'express'
+const express = require('express')
+require('dotenv').config()
 const app = express()
 
 // get the port from env variable
