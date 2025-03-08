@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import axiosMock from 'axios'
 import { act } from 'react-dom/test-utils'
