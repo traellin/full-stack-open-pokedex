@@ -22,10 +22,13 @@ jobs:
               run: npm run eslint
             - name: Test
               run: npm test
-            - name: Bump version and push tag
-              uses: anothrNick/github-tag-action@1.71.0
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    bump_version:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Bump version and push tag
+            uses: anothrNick/github-tag-action@1.71.0
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     test: 
       timeout-minutes: 60
       runs-on: ubuntu-latest
